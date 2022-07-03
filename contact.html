@@ -107,7 +107,7 @@ Author URL: http://w3layouts.com
             </div>
             <div class="row contact-block">
                 <div class="col-md-7 contact-right">
-                    <form id="submit-form" action="">
+                    <form id="submit-form" method="post" action="https://script.google.com/macros/s/AKfycby2JUJDVTei03Ez4l8IwhkGmpHLC3WgLyyxCb34ceZT4fZ8xhZ4igZrlWKv4pm-uigB/exec">
                         <div class="input-grids">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -284,31 +284,14 @@ Author URL: http://w3layouts.com
             })
         });
     </script>
+       
     <!-- //disable body scroll which navbar is in active -->
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
     <!-- //Js scripts -->
-    <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzTKwVsEQlGvqqk8PK15I3hv4fzxdcqfF4mnH1j15f8RVjy5iP2bvM4GVr94kK8P9BCmQ/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
+ 
 </body>
 
 </html>
